@@ -1,11 +1,17 @@
 package com.varalakshmiakella.republicServices.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.varalakshmiakella.republicServices.model.Driver
 import com.varalakshmiakella.republicServices.model.Route
 
 @Dao
 interface DriverDAO {
+    @Query("SELECT * FROM driver")
+    fun getAllDriverList():LiveData<List<Driver>>
+
+    @Query("SELECT * FROM route")
+    fun getAllRoutesList():LiveData<List<Route>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertDriver(driver: List<Driver>)
