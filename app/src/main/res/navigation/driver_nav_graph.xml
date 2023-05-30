@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/route_nav_graph"
+    app:startDestination="@id/driverListFragment">
+
+    <fragment
+        android:id="@+id/driverListFragment"
+        android:name="com.varalakshmiakella.republicServices.ui.DriverListFragment"
+        android:label="DriverListFragment">
+        <action
+            android:id="@+id/action_driverListFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverDetailFragment"
+        android:name="com.varalakshmiakella.republicServices.ui.DriverDetailFragment"
+        android:label="DriverDetailFragment">
+        <argument
+            android:name="driver"
+            app:argType="com.varalakshmiakella.republicServices.model.Driver" />
+    </fragment>
+</navigation>

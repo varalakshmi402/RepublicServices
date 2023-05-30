@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Republic Services</string>
+    <string name="route_type">Route Type : </string>
+    <string name="route_name">Route Name : </string>
+    <string name="sort_button_text">SORT NAMES</string>
+    <string name="drivers_list_title">List Of Drivers</string>
+</resources>
